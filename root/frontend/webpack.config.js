@@ -32,8 +32,12 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpe?g | png | gif)$/,
-        use: ['file-loader']
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+          publicPath: 'assets',
+        },
       },
     ],
   },
